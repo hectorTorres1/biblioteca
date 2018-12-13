@@ -24,31 +24,31 @@
     }else{
         echo "No se pudo guardar";
     }
-
     require 'PHPMailer/PHPMailerAutoload.php' ;
-    $email = new PHPMailer();
-	$email->isSMTP();
-	$email->SMTPAuth = true;
-	$email->SMTPSecure = 'tls';
-	$email->Host = 'smtp.gmail.com';
-	$email->Port = 587;
+    $mail = new PHPMailer();
 	
-	$email->Username = 'caosvirtual0@gmail.com'; //Correo de donde enviaremos los correos
-	$email->Password = 'caosvirtual12'; // Password de la cuenta de envío
+	$mail->isSMTP();
+	$mail->SMTPAuth = true;
+	$mail->SMTPSecure = 'tls';
+	$mail->Host = 'smtp.gmail.com';
+	$mail->Port = 587;
 	
-	$email->setFrom('caosvirtual0@gmail.com', 'soy la vergaaaaaaaaaaa');
-	$email->addAddress('$cor', 'probando que soy la mera crema'); //Correo receptor
+	$mail->Username = 'caosvirtual0@gmail.com'; //Correo de donde enviaremos los correos
+	$mail->Password = 'caosvirtual12'; // Password de la cuenta de envío
 	
+	$mail->setFrom('caosvirtual0@gmail.com', 'soy la vergaaaaaaaaaaa');
+	$mail->addAddress($cor, 'probando que soy la mera crema'); //Correo receptor
+	echo $cor;
 	
-	$email->Subject = 'holi';
-	$email->Body    = 'segimos probando ppcdsalvc 1,2,3';
+	$mail->Subject = 'holi ';
+	$mail->Body    = 'segimos probando ppcdsalvc 1,2,3';
 	
-	if($email->send()) {
+	if($mail->send()) {
 		echo 'Correo Enviado';
 		} else {
-		echo 'many maaaa';
+		echo 'Error';
 	}
 
     mysqli_close($conn);
-    header('location:libros.php');
+    header('location:');
 ?>
