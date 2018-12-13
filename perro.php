@@ -1,2 +1,0 @@
-chihcarito
-es puñal
