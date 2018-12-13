@@ -36,12 +36,13 @@
 	$mail->Username = 'caosvirtual0@gmail.com'; //Correo de donde enviaremos los correos
 	$mail->Password = 'caosvirtual12'; // Password de la cuenta de envío
 	
-	$mail->setFrom('caosvirtual0@gmail.com', 'soy la vergaaaaaaaaaaa');
-	$mail->addAddress($cor, 'probando que soy la mera crema'); //Correo receptor
+	$mail->setFrom('caosvirtual0@gmail.com', 'Universidad Tecnologica del Estado de Zacatecas');
+	$mail->addAddress($cor, $nom); //Correo receptor
 	echo $cor;
 	
-	$mail->Subject = 'holi ';
-	$mail->Body    = 'segimos probando ppcdsalvc 1,2,3';
+	$mail->Subject = 'Biblioteca';
+    $mail->Body    = 'Estimado usuario se te informa que haz adquirido un libro. No olvides que al cumplirse los 7 dias del prestamo 
+     tendras que regresar el material prestado. A)	De acuerdo al procedimiento P-BIB-01, hace mención en la política 9,  el material debe ser devuelto en optimas condiciones o de lo contrario se realizara el trámite para su reposición.';
 	
 	if($mail->send()) {
 		echo 'Correo Enviado';
