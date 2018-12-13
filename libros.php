@@ -40,7 +40,7 @@
                     <th>Alumno</th>
                     <th>Carrera</th>
                     <th>Fecha de Entrega</th>
-                    <th>Estatus</th>
+                    <th>Entregar</th>
                 </tr>
             </thead>
     
@@ -49,9 +49,9 @@
                     require("conexion.php");
                     if(isset($_GET["buscar"]) && $_GET["buscar"]!=""){
                         $buscar=$_GET["buscar"];
-                        $sql="select id_prestamo, titulo, autor, editorial, clasificacion, nombre, carrera, fechaEntrega, estatus from prestamos where nombre like '%$buscar%' and estatus = 1 order by id_prestamo desc";
+                        $sql="select id_prestamo, titulo, autor, editorial, clasificacion, nombre, carrera, fechaEntrega, estatus from prestamos where nombre like '%$buscar%' and estatus = 'Prestado' order by id_prestamo desc";
                     }else{
-                        $sql="select id_prestamo, titulo, autor, editorial, clasificacion, nombre, carrera, estatus, fechaEntrega, estatus from prestamos where estatus = 1 order by id_prestamo desc "; 
+                        $sql="select id_prestamo, titulo, autor, editorial, clasificacion, nombre, carrera, estatus, fechaEntrega, estatus from prestamos where estatus = 'Prestado' order by id_prestamo desc "; 
                     }
                     $resultado=mysqli_query($conn,$sql);
                     if(mysqli_num_rows($resultado)>0){
@@ -90,7 +90,7 @@
                                 echo "</td>";
 
                                 echo"<td>";
-                                echo "<a href='baja.php?id=".$fila["id_prestamo"]."'><img width='20' src='imagenes/eliminar.jpg'></a>" ;
+                                echo "<a href='baja.php?id=".$fila["id_prestamo"]."'><i class='material-icons'>archive</i></a>" ;
                                 echo "</td>";
                             }
                         }
