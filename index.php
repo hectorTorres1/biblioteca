@@ -12,7 +12,7 @@
 	$mail->Username = 'caosvirtual0@gmail.com'; //Correo de donde enviaremos los correos
 	$mail->Password = 'caosvirtual12'; // Password de la cuenta de envío
 	
-	$mail->setFrom('caosvirtual0@gmail.com', 'soy la verga');
+	$mail->setFrom('caosvirtual0@gmail.com', 'soy la vergaaaaaaaaaaa');
 	$mail->addAddress('fobia50@gmail.com', 'probando que soy la mera crema'); //Correo receptor
 	
 	
