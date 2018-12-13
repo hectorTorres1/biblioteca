@@ -26,13 +26,13 @@
           <label for="icon_prefix">Buscar</label>
         </div>
       </div>
-    
+</form>
         </nav>
 
         <table class="highlight">
             <thead>
                 <tr>
-                    <th></h>
+                    <th></th>
                     <th>Titulo</th>
                     <th>Autor</th>
                     <th>Editorial</th>
