@@ -40,7 +40,7 @@
                     <th>Alumno</th>
                     <th>Carrera</th>
                     <th>Fecha de Entrega</th>
-                    <th>Entrego</th>
+                    <th>Entregar</th>
                 </tr>
             </thead>
     
