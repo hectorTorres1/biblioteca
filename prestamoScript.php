@@ -41,7 +41,7 @@
 	echo $cor;
 	
 	$mail->Subject = 'Biblioteca';
-    $mail->Body    = 'Estimado usuario se te informa que haz adquirido un libro. No olvides que al cumplirse los 7 dias del prestamo 
+    $mail->Body    = 'Estimado $nom se te informa que haz adquirido el libro $mat. No olvides que al cumplirse la fecha: $fe
      tendras que regresar el material prestado. A)	De acuerdo al procedimiento P-BIB-01, hace mención en la política 9,  el material debe ser devuelto en optimas condiciones o de lo contrario se realizara el trámite para su reposición.';
 	
 	if($mail->send()) {
