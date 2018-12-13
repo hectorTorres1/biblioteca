@@ -22,6 +22,6 @@
 	if($mail->send()) {
 		echo 'Correo Enviado';
 		} else {
-		echo 'Error al enviar correo';
+		echo 'Error al enviar correoooooo';
 	}
 ?>		
