@@ -10,8 +10,8 @@
     $aut=$_POST['aut'];
     $cla=$_POST['cla'];
     $edi=$_POST['edi'];
-    $fp=$_POST['fechap'];
-    $fe='2018-05-21';
+    $fe=$_POST['fechae'];
+    $fp='2018-05-21';
 
     require('conexion.php');
 
