@@ -24,4 +24,4 @@
 		} else {
 		echo 'many maaaa';
 	}
-?>		
+?>
