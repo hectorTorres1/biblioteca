@@ -10,14 +10,14 @@
     $aut=$_POST['aut'];
     $cla=$_POST['cla'];
     $edi=$_POST['edi'];
-    $fp=$_POST['fechap'];
-    $fe='2018-05-21';
+    $fe=$_POST['fechae'];
+    $fp='2018-05-21';
 
     require('conexion.php');
 
     $sql="INSERT INTO prestamos (id_prestamo,nombre,apellidos,carrera,matricula,direccion,correo,titulo,autor,clasificacion,
     editorial,fechaPrestamo,fechaEntrega,estatus)
-    VALUES (0,'$nom','$ape','$car','$mat','$dir','$cor','$tit','$aut','$cla','$edi','$fp','$fe',1)";
+    VALUES (0,'$nom','$ape','$car','$mat','$dir','$cor','$tit','$aut','$cla','$edi','$fp','$fe','Prestado')";
 
     if(mysqli_query($conn,$sql)){  
         echo "Registro Guardado ";
@@ -41,7 +41,7 @@
 	echo $cor;
 	
 	$mail->Subject = 'Biblioteca';
-    $mail->Body    = 'Estimado usuario se te informa que haz adquirido un libro. No olvides que al cumplirse los 7 dias del prestamo 
+    $mail->Body    = 'Estimado $nom se te informa que haz adquirido el libro $mat. No olvides que al cumplirse la fecha: $fe
      tendras que regresar el material prestado. A)	De acuerdo al procedimiento P-BIB-01, hace mención en la política 9,  el material debe ser devuelto en optimas condiciones o de lo contrario se realizara el trámite para su reposición.';
 	
 	if($mail->send()) {
@@ -51,5 +51,5 @@
 	}
 
     mysqli_close($conn);
-    header('location:');
+    header('location:libros.php');
 ?>
