@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Eats - Servicios de comida</title>
+    <title>Prestamo </title>
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -88,11 +88,23 @@
                                 <label for="cla">Clasitifación</label>
                         </div>
 
+
+
                         <div class="input-field col s6">
                             <i class="material-icons prefix">E</i>
                             <input id="edi" type="text" class="validate" name="edi">
                             <label for="edi">Editorial</label>
-                        </div>    
+                        </div>  
+
+                                    
+                           
+                         <div class="input-field col s6">
+                            <i class="material-icons prefix">date_range</i>
+                            <input id="fechap" type="date" class="datepicker" name="fechap">
+                            <label for="edi">Fecha</label>
+                        </div>  
+
+              
 
                     </div>
                     <center>
@@ -110,6 +122,15 @@
         <script src="js/init.js"></script>
         <script>$('.dropdown-trigger').dropdown();</script>
         <script>$(document).ready(function(){$('select').formSelect();});</script>
+          <script type="text/javascript">
+                              document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.datepicker');
+    var instances = M.Datepicker.init(elems, options);
+  });
+
+  
+          
+                        </script>
     </body>
 
 </html>
