@@ -20,7 +20,7 @@
     VALUES (0,'$nom','$ape','$car','$mat','$dir','$cor','$tit','$aut','$cla','$edi','$fp','$fe',1)";
 
     if(mysqli_query($conn,$sql)){  
-        echo "Registro Guardado";
+        echo "Registro Guardado ";
     }else{
         echo "No se pudo guardar";
     }
@@ -45,7 +45,7 @@
      tendras que regresar el material prestado. A)	De acuerdo al procedimiento P-BIB-01, hace mención en la política 9,  el material debe ser devuelto en optimas condiciones o de lo contrario se realizara el trámite para su reposición.';
 	
 	if($mail->send()) {
-		echo 'Correo Enviado';
+		echo ' Correo Enviado';
 		} else {
 		echo 'Error';
 	}
