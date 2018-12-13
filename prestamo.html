@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Eats - Servicios de comida</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  </head>
+
+    <body>
+
+        <nav class="white">
+            <div class="wrapper">
+                <a href="#!" class="brand-logo center">Ficha de Prestamo</a>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="card-panel white"> 
+
+                <form action="prestamoScript.php" method="POST" class="col s12">
+                    <div class="row">
+    
+                        <center><h5>Datos del Alusmno</h5></center>
+                        <div class=" input-field col s6">
+                            <i class="material-icons prefix">person_outline</i>
+                            <input id="nom" type="text" class="validate" name="nom">
+                            <label for="nom">Nombre(s)</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">person_outline</i>
+                            <input id="ap" type="text" class="validate" name="ap">
+                            <label for="ap">Apellidos</label>
+                        </div>
+
+                        <div class="input-field col s6">  
+                            <i class="material-icons prefix">school</i>    
+                            <select name="car"> 
+                                <option value="" disabled selected>Elige Carrera</option>
+                                <option value="Tecnologias">TIC'S</option>
+                                <option value="Terapia Fisica">Terapia Fisica</option>
+                                <option value="Minas">Minas</option>
+                            </select>
+                            <label>Carrera</label>         
+                        </div>
+
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">person</i>
+                            <input id="mat" type="tel" class="validate" name="mat">
+                            <label for="mat">Matricula</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">place</i>
+                            <input id="dir" type="text" class="validate" name="dir">
+                            <label for="dir">Direccion</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">mail</i>
+                            <input id="cor" type="email" class="validate" name="cor">
+                            <label for="cor">Correo Electronico</label>
+                        </div>    
+
+                        <li><div class="divider"></div></li>
+
+                        <center><h5>Información del Material</h5></center>
+                        <div class="input-field col s6">
+                                <i class="material-icons prefix">book</i>
+                                <input id="tit" type="text" class="validate" name="tit">
+                                <label for="tit">Titulo</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">person</i>
+                            <input id="aut" type="tel" class="validate" name="aut">
+                            <label for="aut">Autor</label>
+                        </div>    
+
+                        <div class="input-field col s6">
+                                <i class="material-icons prefix">C</i>
+                                <input id="cla" type="text" class="validate" name="cla">
+                                <label for="cla">Clasitifación</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">E</i>
+                            <input id="edi" type="tel" class="validate" name="edi">
+                            <label for="edi">Editorial</label>
+                        </div>    
+
+                    </div>
+                    <center>
+                        <button class="btn waves-effect waves-light" type="submit">Continuar
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </center>
+                </form>
+            </div>
+        </div>
+        
+        <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script>$('.dropdown-trigger').dropdown();</script>
+        <script>$(document).ready(function(){$('select').formSelect();});</script>
+    </body>
+
+</html>
