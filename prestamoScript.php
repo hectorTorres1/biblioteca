@@ -24,6 +24,31 @@
     }else{
         echo "No se pudo guardar";
     }
+
+    require 'PHPMailer/PHPMailerAutoload.php' ;
+    $email = new PHPMailer();
+	$email->isSMTP();
+	$email->SMTPAuth = true;
+	$email->SMTPSecure = 'tls';
+	$email->Host = 'smtp.gmail.com';
+	$email->Port = 587;
+	
+	$email->Username = 'caosvirtual0@gmail.com'; //Correo de donde enviaremos los correos
+	$email->Password = 'caosvirtual12'; // Password de la cuenta de envío
+	
+	$email->setFrom('caosvirtual0@gmail.com', 'soy la vergaaaaaaaaaaa');
+	$email->addAddress('$cor', 'probando que soy la mera crema'); //Correo receptor
+	
+	
+	$email->Subject = 'holi';
+	$email->Body    = 'segimos probando ppcdsalvc 1,2,3';
+	
+	if($email->send()) {
+		echo 'Correo Enviado';
+		} else {
+		echo 'many maaaa';
+	}
+
     mysqli_close($conn);
-    header('location:');
+    header('location:libros.php');
 ?>
