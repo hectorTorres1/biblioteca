@@ -22,6 +22,6 @@
 	if($mail->send()) {
 		echo 'Correo Enviado';
 		} else {
-		echo 'many'; a que la vergaaaaaaaaaaa
+		echo 'many'; MATADOR PROBANDO
 	}
 ?>		
