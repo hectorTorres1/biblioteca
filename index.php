@@ -22,6 +22,6 @@
 	if($mail->send()) {
 		echo 'Correo Enviado';
 		} else {
-		echo 'many ma';
+		echo 'many maaaa';
 	}
 ?>		
