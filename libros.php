@@ -90,7 +90,7 @@
                                 echo "</td>";
 
                                 echo"<td>";
-                                echo $fila["estatus"];
+                                echo "<a href='baja.php?id=".$fila["id_prestamo"]."'><img width='20' src='imagenes/eliminar.jpg'></a>" ;
                                 echo "</td>";
                             }
                         }
