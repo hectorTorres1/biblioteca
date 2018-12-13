@@ -2,7 +2,7 @@
     require("conexion.php");
     
 
-$sql="UPDATE prestamos SET  estatus= '0' WHERE id_prestamo='$_GET[id]'" ;
+$sql="UPDATE prestamos SET  estatus= 'Entregado' WHERE id_prestamo='$_GET[id]'" ;
 
 if(mysqli_query($conn,$sql)){
 	echo "Actualización Exitosa";

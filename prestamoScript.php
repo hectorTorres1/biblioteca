@@ -17,7 +17,7 @@
 
     $sql="INSERT INTO prestamos (id_prestamo,nombre,apellidos,carrera,matricula,direccion,correo,titulo,autor,clasificacion,
     editorial,fechaPrestamo,fechaEntrega,estatus)
-    VALUES (0,'$nom','$ape','$car','$mat','$dir','$cor','$tit','$aut','$cla','$edi','$fp','$fe',1)";
+    VALUES (0,'$nom','$ape','$car','$mat','$dir','$cor','$tit','$aut','$cla','$edi','$fp','$fe','Prestado')";
 
     if(mysqli_query($conn,$sql)){  
         echo "Registro Guardado ";
