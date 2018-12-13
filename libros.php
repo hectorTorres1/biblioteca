@@ -32,13 +32,15 @@
         <table class="highlight">
             <thead>
                 <tr>
+                    <th></h>
                     <th>Titulo</th>
                     <th>Autor</th>
                     <th>Editorial</th>
-                    <th>Ejemplar</th>
+                    <th>Clasificación</th>
                     <th>Alumno</th>
                     <th>Carrera</th>
                     <th>Fecha de Entrega</th>
+                    <th>Estatus</th>
                 </tr>
             </thead>
     
@@ -47,15 +49,16 @@
                     require("conexion.php");
                     if(isset($_GET["buscar"]) && $_GET["buscar"]!=""){
                         $buscar=$_GET["buscar"];
-                        $sql="select id_prestamo, titulo, autor, editorial, nombre, carrera, fechaEntrega from prestamos where nombre like '%$buscar%' order by id_prestamo desc";
+                        $sql="select id_prestamo, titulo, autor, editorial, clasificacion, nombre, carrera, fechaEntrega, estatus from prestamos where nombre like '%$buscar%' and estatus = 1 order by id_prestamo desc";
                     }else{
-                        $sql="select id_prestamo, titulo, autor, editorial, nombre, carrera, fechaEntrega from prestamos order by id_prestamo desc "; 
+                        $sql="select id_prestamo, titulo, autor, editorial, clasificacion, nombre, carrera, estatus, fechaEntrega, estatus from prestamos where estatus = 1 order by id_prestamo desc "; 
                     }
                     $resultado=mysqli_query($conn,$sql);
                     if(mysqli_num_rows($resultado)>0){
                         while($fila=mysqli_fetch_assoc($resultado)){
                             echo "<tr><td>
                             </td>";
+                        
                                 
                                 echo"<td>";
                                 echo $fila["titulo"];
@@ -70,17 +73,24 @@
                                 echo "</td>";
                                 
                                 
-                                
+                                echo"<td>";
+                                echo $fila["clasificacion"];
+                                echo "</td>";
+                                 
                                 echo"<td>";
                                 echo $fila["nombre"];
                                 echo "</td>";
-                                 
+
                                 echo"<td>";
                                 echo $fila["carrera"];
                                 echo "</td>";
                                 
                                 echo"<td>";
                                 echo $fila["fechaEntrega"];
+                                echo "</td>";
+
+                                echo"<td>";
+                                echo $fila["estatus"];
                                 echo "</td>";
                             }
                         }
